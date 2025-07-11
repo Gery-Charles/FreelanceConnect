@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}HomePage{% endblock %}
+
+{% block body %}
+    <section id="intro" class="container">
+        <div class="row">
+            <div class="col-4 col-12-medium">
+                <section class="first">
+                    <i class="icon solid featured fa-cog"></i>
+                    <header>
+                        <h2>collaboration fluide et simplifiée</h2>
+                    </header>
+                    <p>Notre plateforme a été pensée pour favoriser une interaction claire et efficace entre clients et freelances. Grâce à une interface ergonomique, une gestion centralisée des candidatures et des notifications en temps réel, la collaboration est simplifiée dès la publication d'une mission jusqu'à sa réalisation.</p>
+                </section>
+            </div>
+            <div class="col-4 col-12-medium">
+                <section class="middle">
+                    <i class="icon solid featured alt fa-bolt"></i>
+                    <header>
+                        <h2>Gain de temps</h2>
+                    </header>
+                    <p>Fini les longues recherches et les échanges sans fin : la publication d'une mission se fait en quelques clics, et les freelances peuvent candidater rapidement grâce à un système de candidatures optimisé. Les filtres intelligents permettent également de trouver rapidement les profils ou projets correspondant à ses besoins.</p>
+                </section>
+            </div>
+            <div class="col-4 col-12-medium">
+                <section class="last">
+                    <i class="icon solid featured alt2 fa-star"></i>
+                    <header>
+                        <h2>interface intuitive et moderne</h2>
+                    </header>
+                    <p>Développée avec Symfony et Twig, l’interface a été conçue pour offrir une expérience utilisateur fluide. Le design responsive s’adapte à tous les supports, et les éléments visuels (boutons, images de mission, navigation dynamique) assurent une navigation agréable et contemporaine.</p>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <ul class="actions">
+                <li><a href="{{ path('app_client_creer-mission') }}" class="button large">Publier une mission</a></li>
+                <li><a href="{{ path('app_missions') }}" class="button alt large">Les missions publiées</a></li>
+            </ul>
+        </footer>
+    </section>
+
+
+    <!-- Main -->
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                </div>
+                <div class="col-12">
+
+                    <!-- Blog -->
+                    <section>
+                        <header class="major">
+                            <h2>Offres récentes</h2>
+                        </header>
+                        <div class="row">
+                            {% for mission in missions %}
+                                <div class="col-6 col-12-small">
+                                    <section class="box">
+                                        {% if mission.isImageUploaded %}
+                                            {# Image uploadée via Vich #}
+                                            <a class="image featured" href="{{ path('app_mission_enSavoirPlus', {'id': mission.id}) }}">
+                                                <img src="{{ vich_uploader_asset(mission, 'imageFile') }}" alt="Image {{ mission.titre }}"/>
+                                            </a>
+                                        {% else %}
+                                            {# Image choisie parmi les existantes #}
+                                            <a class="image featured" href="{{ path('app_mission_enSavoirPlus', {'id': mission.id}) }}">
+                                                <img src="{{ asset('images/' ~ mission.imageName) }}" alt="Image {{ mission.titre }}"/>
+                                            </a>
+                                        {% endif %}
+
+                                        <header>
+                                            <h3>{{ mission.titre }}</h3>
+                                            <p>Publiée le {{ mission.datePublication|format_datetime('full', 'short') }}</p>
+                                        </header>
+                                        <p>{{ mission.description|length > 50 ? mission.description[:50] ~ '...' : mission.description }}</p>
+
+                                        <footer>
+                                            <a href="{{ path('app_mission_enSavoirPlus', {'id': mission.id}) }}" class="button icon solid fa-file-alt">En savoir plus</a>
+                                        </footer>
+                                    </section>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

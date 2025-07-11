@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block header_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>{{ utilisateur }}</h2>
+                <p>À props de {{ utilisateur }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div style="padding-top: 2rem">
+                <div class="col-4 col-6-medium">
+                    <section class="middle">
+                        <i class="icon solid featured alt fa-portrait"></i>
+                        <div>
+                            <section>
+                                <header>
+                                    <h2>Coordonnées : </h2>
+                                </header>
+                                <ul class="contact">
+                                    <li>
+                                        <h3>Mail :</h3>
+                                        <p><a href="#">{{utilisateurMail}}</a></p>
+                                    </li>
+                                    <li>
+                                        <h3>Contact :</h3>
+                                        <p>06 12 34 56 78</p>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            {% if missions %}
+                {% for mission in missions %}
+                    <div class="col-4 col-12-medium">
+                        <section class="first">
+                            {% if mission.isImageUploaded %}
+                                {# Image uploadée via Vich #}
+                                <a class="image featured" href="{{ path('app_mission_enSavoirPlus', {'id': mission.id}) }}">
+                                    <img src="{{ vich_uploader_asset(mission, 'imageFile') }}" alt="Image {{ mission.titre }}" />
+                                </a>
+                            {% else %}
+                                {# Image choisie parmi les existantes #}
+                                <a class="image featured" href="{{ path('app_mission_enSavoirPlus', {'id': mission.id}) }}">
+                                    <img src="{{ asset('images/' ~ mission.imageName) }}" alt="Image {{ mission.titre }}" />
+                                </a>
+                            {% endif %}
+                            <header>
+                                <h3>{{ mission.titre }}</h3>
+                                <p>Publiée le {{ mission.datePublication|format_datetime('full', 'short') }}</p>
+                            </header>
+                            <p>{{ mission.description|length > 30 ? mission.description[:30] ~ '...' : mission.description }}</p>
+
+                            <footer>
+                                <a href="{{ path('app_mission_enSavoirPlus', {'id': mission.id}) }}" class="button icon solid fa-file-alt">En savoir plus</a>
+                            </footer>
+                        </section>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <div id="vue-appMissionCarousel">
+                {{ encore_entry_link_tags('app') }}
+                {{ encore_entry_script_tags('app') }}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

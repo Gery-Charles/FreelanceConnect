@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block header_content %}
+
+    <main>
+        <h1>Créer une mission</h1>
+
+        <p>Créez une mission pour pouvoir recevoir des candidatures.</p>
+        {{ form_start(formMission) }}
+        {{ form_end(formMission) }}
+    </main>
+    <br>
+    <p>
+        Vous pouvez retrouver vos missions publiées <a href="{{ path('app_client_missions') }}">ici</a>.
+    </p>
+
+{% endblock %}

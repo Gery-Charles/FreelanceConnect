@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Messagerie{% endblock %}
+
+{% block header_content %}
+    <div >
+        <h2>Messagerie</h2>
+        <p>Retrouvez vos conversations ci-dessous.</p>
+    </div>
+{% endblock %}
+
+{%  block body %}
+    <section>
+        <div class="row" id="vue-appMessagerie" data-user-id="{{ userId }}"></div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('assets/app.js') }}"></script>
+{% endblock %}
+

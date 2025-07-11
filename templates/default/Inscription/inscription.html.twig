@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block header_content %}
+
+    <main>
+        <h2>Créer un compte</h2>
+
+        <p>Inscrivez-vous pour accéder à toutes les fonctionnalités de FreelanceConnect.</p>
+        {{ form_start(form) }}
+        {{ form_end(form) }}
+        <br>
+        <p>Déjà inscrit ? <a href="{{ path('app_login') }}" class="" data-tooltip="Se connecter">Se connecter</a></p>
+    </main>
+{% endblock %}

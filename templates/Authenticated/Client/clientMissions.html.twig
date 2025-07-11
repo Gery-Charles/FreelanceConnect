@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes missionss{% endblock %}
+
+{% block header_content %}
+    <h2>Mes missions</h2>
+    <p>Retrouvez vos missions publiées ici.</p>
+{% endblock %}
+
+{% block body %}
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                </div>
+                <div class="col-12">
+
+                    <!-- Blog -->
+                    <section>
+                        <div class="row">
+                            {% for mission in missions %}
+                                <div class="col-6 col-12-small">
+                                    <section class="box">
+                                        {% if mission.isImageUploaded %}
+                                            {# Image uploadée via Vich #}
+                                            <a class="image featured">
+                                                <img src="{{ vich_uploader_asset(mission, 'imageFile') }}" alt="Image mission" />
+                                            </a>
+                                        {% else %}
+                                            {# Image choisie parmi les existantes #}
+                                            <a class="image featured">
+                                                <img src="{{ asset('images/' ~ mission.imageName) }}" alt="Image mission" />
+                                            </a>
+                                        {% endif %}
+
+                                        <header>
+                                            <h3>{{ mission.titre }}</h3>
+                                            <p>Publiée le {{ mission.datePublication|format_datetime('full', 'short') }}</p>
+                                        </header>
+                                        <p>{{ mission.description|length > 50 ? mission.description[:50] ~ '...' : mission.description }}</p>
+                                    </section>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

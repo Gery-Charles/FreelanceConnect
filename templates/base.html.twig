@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}FreelanceConnect{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href={{ asset('assets/css/main.css') }}>
+    {% endblock %}
+
+    {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        <script src="{{ asset('assets/js/breakpoints.min.js') }}" defer></script>
+        <script src="{{ asset('assets/js/browser.min.js') }}" defer></script>
+        <script src="{{ asset('assets/js/jquery.min.js') }}" defer></script>
+        <script src="{{ asset('assets/js/main.js') }}" defer></script>
+        <script src="{{ asset('assets/js/util.js') }}" defer></script>
+    {% endblock %}
+
+</head>
+
+<body class="homepage is-preload">
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <section id="header">
+
+        <!-- Logo -->
+        <h1><a href="{{ path('app_homepage') }}">FreelanceConnect</a></h1>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                {% set current_route = app.request.attributes.get('_route') %}
+                <li class="{% if current_route == 'app_homepage' %}current{% endif %}"><a href="{{ path('app_homepage') }}">Acceuil</a></li>
+
+                {%  if not is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li class="{% if current_route == 'app_login' %}current{% endif %}"><a href="{{ path('app_login') }}">Connexion</a></li>
+                <li class="{% if current_route in ['app_inscription', 'app_inscription/client', 'app_inscription/freelance'] %}current{% endif %}">
+                    <a href="{{ path('app_inscription') }}">Inscription</a>
+                </li>
+                {% endif %}
+
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <li class="{% if app.request.attributes.get('_route') == 'app_monCompte' %}current{% endif %}"><a href="{{ path('app_monCompte') }}">Mon compte</a></li>
+                    {% if is_granted('ROLE_CLIENT') %}
+                        <li class="{% if app.request.attributes.get('_route') == 'app_client_missions' %}current{% endif %}"><a href="{{ path('app_client_missions') }}">Mes missions</a></li>
+                    {%  endif %}
+                    {% if is_granted('ROLE_FREELANCE') %}
+                        <li class="{% if app.request.attributes.get('_route') == 'app_client_missions' %}current{% endif %}"><a href="{{ path('app_freelance_candidatures') }}">Mes candidatures</a></li>
+                    {%  endif %}
+                    <li class="{% if app.request.attributes.get('_route') == 'api_conversations' %}current{% endif %}"><a href="{{ path('app_messagerie') }}">Messagerie</a></li>
+                    <li class="{% if app.request.attributes.get('_route') == 'app_logout' %}current{% endif %}"><a href="{{ path('app_logout') }}">Se déconnecter</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+
+        <!-- Banner -->
+        <section id="banner">
+            <header>
+                {%  block header_content %}
+                    <h2>Bienvenue sur FreelanceConnect</h2>
+
+                    <p>Mise en relation entre freelances et clients.</p>
+                    {% if app.user %}
+                        <div class="mb-3">
+                            Vous êtes connecté en tant que {{ app.user.userIdentifier }}.
+                        </div>
+                    {% endif %}
+                {% endblock %}
+            </header>
+        </section>
+
+        <div id="messageBox"></div>
+
+        {% block body %}{% endblock %}
+
+    </section>
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 col-12-medium">
+                    <section>
+                        <header>
+                            <h2>Coordonnées : </h2>
+                        </header>
+                        <ul class="contact">
+                            <li>
+                                <h3>Adresse :</h3>
+                                <p>
+                                    17000 La Rochelle<br>
+                                    France
+                                </p>
+                            </li>
+                            <li>
+                                <h3>Mail :</h3>
+                                <p><a href="#">freelanceConnect@gmail.com</a></p>
+                            </li>
+                            <li>
+                                <h3>Contact :</h3>
+                                <p>06 12 34 56 78</p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <div class="col-4 col-12-medium">
+                        <section>
+                            <header>
+                                <h2>Nos réseaux sociaux : </h2>
+                            </header>
+                            <ul class="social">
+                                <li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+                                <li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                                <li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+                                <li><a class="icon brands fa-tumblr" href="#"><span class="label">Tumblr</span></a></li>
+                                <li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-12">
+
+                    <!-- Copyright -->
+                    <div id="copyright">
+                        <ul class="links">
+                            <li>&copy;Gery_Charles - Projet WEB L2</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

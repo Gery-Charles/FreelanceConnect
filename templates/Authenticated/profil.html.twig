@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block header_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Mon compte</h2>
+                <p>Retrouvez les informations vous concernant ci-dessous.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+        <div style="padding-top: 2rem">
+            <div class="col-4 col-6-medium">
+                <section class="middle">
+                    <i class="icon solid featured alt fa-portrait"></i>
+                    <div    >
+                        <section>
+                            <header>
+                                <h2>Coordonnées : </h2>
+                            </header>
+                            <ul class="contact">
+                                <li>
+                                    <h3>Mail :</h3>
+                                    <p><a href="#">{{user.email}}</a></p>
+                                </li>
+                                <li>
+                                    <h3>Contact :</h3>
+                                    <p>06 12 34 56 78</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <footer>
+                        <a href="#" class="button icon solid fa-file-alt">Modifier mes informations</a>
+                    </footer>
+                </section>
+            </div>
+        </div>
+
+        </div>
+    </div>
+{% endblock %}

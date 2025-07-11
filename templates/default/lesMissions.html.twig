@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block header_content %}
+    <h2>Missions publiées</h2>
+    <p>Retrouvez toutes les missions publiées sur notre site ci-dessous.</p>
+{% endblock %}
+
+{% block body %}
+    <!-- Main -->
+    <section id="main">
+        <div id="vue-app">
+            {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_link_tags('app') }}
+        </div>
+
+    </section>
+
+{% endblock %}
