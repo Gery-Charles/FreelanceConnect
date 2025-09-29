@@ -1,0 +1,57 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./vueJS/assets/components/Messagerie/ConversationList.vue?vue&type=style&index=0&id=fc7b2e44&scoped=true&lang=css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************/
+
+.conversation-item[data-v-fc7b2e44] {
+  border: solid 1px #2c2929;
+  border-radius: 15px;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./vueJS/assets/components/Messagerie/Messagerie.vue?vue&type=style&index=0&id=56f264f8&scoped=true&lang=css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+
+.messagerie[data-v-56f264f8] {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.conversations-pane[data-v-56f264f8] {
+  width: 300px;
+  border-right: 1px solid #ddd;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+}
+.messages-pane[data-v-56f264f8] {
+  flex: 1;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-4.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./vueJS/assets/components/Messagerie/Messagerie.vue?vue&type=style&index=1&id=56f264f8&scoped=true&lang=css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+
+.messagerie[data-v-56f264f8] {
+  display: flex;
+  height: 100%; /* Important pour qu'il remplisse le parent */
+  width: 100%;
+  overflow: hidden;
+}
+.conversations-pane[data-v-56f264f8] {
+  width: 300px;
+  border-right: 1px solid #ddd;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+}
+.messages-pane[data-v-56f264f8] {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNzcyIsIm1hcHBpbmdzIjoiOzs7O0FBb0NBO0VBQ0UseUJBQXlCO0VBQ3pCLG1CQUFtQjtFQUNuQixZQUFZO0VBQ1osa0JBQWtCO0FBQ3BCOzs7Ozs7QUNkQTtFQUNFLGFBQWE7RUFDYixZQUFZO0VBQ1osV0FBVztBQUNiO0FBRUE7RUFDRSxZQUFZO0VBQ1osNEJBQTRCO0VBQzVCLHlCQUF5QjtFQUN6QixnQkFBZ0I7QUFDbEI7QUFFQTtFQUNFLE9BQU87RUFDUCxhQUFhO0VBQ2Isc0JBQXNCO0FBQ3hCOzs7Ozs7QUFLQTtFQUNFLGFBQWE7RUFDYixZQUFZLEVBQUUsNkNBQTZDO0VBQzNELFdBQVc7RUFDWCxnQkFBZ0I7QUFDbEI7QUFFQTtFQUNFLFlBQVk7RUFDWiw0QkFBNEI7RUFDNUIseUJBQXlCO0VBQ3pCLGdCQUFnQjtBQUNsQjtBQUVBO0VBQ0UsT0FBTztFQUNQLGFBQWE7RUFDYixnQkFBZ0I7RUFDaEIsc0JBQXNCO0FBQ3hCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vdnVlSlMvYXNzZXRzL2NvbXBvbmVudHMvTWVzc2FnZXJpZS9Db252ZXJzYXRpb25MaXN0LnZ1ZSIsIndlYnBhY2s6Ly8vLi92dWVKUy9hc3NldHMvY29tcG9uZW50cy9NZXNzYWdlcmllL01lc3NhZ2VyaWUudnVlIl0sInNvdXJjZXNDb250ZW50IjpbIjx0ZW1wbGF0ZT5cclxuICA8ZGl2IGNsYXNzPVwiYm94XCI+XHJcbiAgICA8aDM+Q29udmVyc2F0aW9uczwvaDM+XHJcbiAgICA8dWwgY2xhc3M9XCJjb252ZXJzYXRpb24tbGlzdFwiPlxyXG4gICAgICA8bGlcclxuICAgICAgICAgIHYtZm9yPVwiY29udmVyc2F0aW9uIGluIGNvbnZlcnNhdGlvblN0b3JlLmNvbnZlcnNhdGlvbnNcIlxyXG4gICAgICAgICAgOmtleT1cImNvbnZlcnNhdGlvbi5pZFwiXHJcbiAgICAgICAgICBAY2xpY2s9XCJjb252ZXJzYXRpb25TdG9yZS5zZWxlY3RDb252ZXJzYXRpb24oY29udmVyc2F0aW9uKVwiXHJcbiAgICAgICAgICBjbGFzcz1cImNvbnZlcnNhdGlvbi1pdGVtIGN1cnNvci1wb2ludGVyXCJcclxuICAgICAgPlxyXG4gICAgICAgIHt7IGNvbnZlcnNhdGlvbi5kZXN0aW5hdGFpcmUubm9tIH19IHt7IGNvbnZlcnNhdGlvbi5kZXN0aW5hdGFpcmUucHJlbm9tIH19XHJcbiAgICAgIDwvbGk+XHJcbiAgICA8L3VsPlxyXG4gIDwvZGl2PlxyXG48L3RlbXBsYXRlPlxyXG5cclxuPHNjcmlwdCBzZXR1cD5cclxuaW1wb3J0IHsgdXNlQ29udmVyc2F0aW9uU3RvcmUgfSBmcm9tICcuLi8uLi9zdG9yZXMvY29udmVyc2F0aW9uU3RvcmUnO1xyXG5pbXBvcnQgeyBvbk1vdW50ZWQgfSBmcm9tICd2dWUnO1xyXG5cclxuY29uc3QgY29udmVyc2F0aW9uU3RvcmUgPSB1c2VDb252ZXJzYXRpb25TdG9yZSgpO1xyXG5cclxuY29uc3QgcHJvcHMgPSBkZWZpbmVQcm9wcyh7XHJcbiAgdXNlcklkOiBbU3RyaW5nLCBOdW1iZXJdLFxyXG59KTtcclxuXHJcbm9uTW91bnRlZCgoKSA9PiB7XHJcbiAgZmV0Y2goJy9hcGkvY29udmVyc2F0aW9ucycpXHJcbiAgICAgIC50aGVuKChyZXMpID0+IHJlcy5qc29uKCkpXHJcbiAgICAgIC50aGVuKChkYXRhKSA9PiB7XHJcbiAgICAgICAgY29udmVyc2F0aW9uU3RvcmUuc2V0Q29udmVyc2F0aW9ucyhkYXRhKTtcclxuICAgICAgfSk7XHJcbn0pO1xyXG48L3NjcmlwdD5cclxuXHJcbjxzdHlsZSBzY29wZWQ+XHJcbi5jb252ZXJzYXRpb24taXRlbSB7XHJcbiAgYm9yZGVyOiBzb2xpZCAxcHggIzJjMjkyOTtcclxuICBib3JkZXItcmFkaXVzOiAxNXB4O1xyXG4gIHBhZGRpbmc6IDhweDtcclxuICBtYXJnaW4tYm90dG9tOiA1cHg7XHJcbn1cclxuPC9zdHlsZT5cclxuIiwiPHRlbXBsYXRlPlxyXG4gIDxkaXYgY2xhc3M9XCJtZXNzYWdlcmllXCI+XHJcbiAgICA8ZGl2IGNsYXNzPVwiY29udmVyc2F0aW9ucy1wYW5lXCI+XHJcbiAgICAgIDxDb252ZXJzYXRpb25MaXN0IDp1c2VyLWlkPVwidXNlcklkXCIgLz5cclxuICAgIDwvZGl2PlxyXG4gICAgPGRpdiBjbGFzcz1cIm1lc3NhZ2VzLXBhbmVcIiB2LWlmPVwiY29udmVyc2F0aW9uU3RvcmUuc2VsZWN0ZWRDb252ZXJzYXRpb25cIj5cclxuICAgICAgPExpc3RNZXNzYWdlc1xyXG4gICAgICAgICAgOmNvbnZlcnNhdGlvbi1pZD1cImNvbnZlcnNhdGlvblN0b3JlLnNlbGVjdGVkQ29udmVyc2F0aW9uLmlkXCJcclxuICAgICAgICAgIDpyZWNldmV1ci1pZD1cImNvbnZlcnNhdGlvblN0b3JlLnNlbGVjdGVkQ29udmVyc2F0aW9uLmRlc3RpbmF0YWlyZS5pZFwiXHJcbiAgICAgIC8+XHJcbiAgICA8L2Rpdj5cclxuICA8L2Rpdj5cclxuPC90ZW1wbGF0ZT5cclxuXHJcbjxzY3JpcHQgc2V0dXA+XHJcbmltcG9ydCB7IHVzZUNvbnZlcnNhdGlvblN0b3JlIH0gZnJvbSAnLi4vLi4vc3RvcmVzL2NvbnZlcnNhdGlvblN0b3JlJztcclxuaW1wb3J0IENvbnZlcnNhdGlvbkxpc3QgZnJvbSAnLi9Db252ZXJzYXRpb25MaXN0LnZ1ZSc7XHJcbmltcG9ydCBMaXN0TWVzc2FnZXMgZnJvbSAnLi9MaXN0TWVzc2FnZXMudnVlJztcclxuXHJcbmNvbnN0IGNvbnZlcnNhdGlvblN0b3JlID0gdXNlQ29udmVyc2F0aW9uU3RvcmUoKTtcclxuXHJcbmNvbnN0IHByb3BzID0gZGVmaW5lUHJvcHMoe1xyXG4gIHVzZXJJZDogW1N0cmluZywgTnVtYmVyXSxcclxufSk7XHJcbjwvc2NyaXB0PlxyXG5cclxuPHN0eWxlIHNjb3BlZD5cclxuLm1lc3NhZ2VyaWUge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uY29udmVyc2F0aW9ucy1wYW5lIHtcclxuICB3aWR0aDogMzAwcHg7XHJcbiAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2RkZDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjRmNGY0O1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbn1cclxuXHJcbi5tZXNzYWdlcy1wYW5lIHtcclxuICBmbGV4OiAxO1xyXG4gIHBhZGRpbmc6IDFyZW07XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcclxufVxyXG48L3N0eWxlPlxyXG5cclxuXHJcbjxzdHlsZSBzY29wZWQ+XHJcbi5tZXNzYWdlcmllIHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGhlaWdodDogMTAwJTsgLyogSW1wb3J0YW50IHBvdXIgcXUnaWwgcmVtcGxpc3NlIGxlIHBhcmVudCAqL1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIG92ZXJmbG93OiBoaWRkZW47XHJcbn1cclxuXHJcbi5jb252ZXJzYXRpb25zLXBhbmUge1xyXG4gIHdpZHRoOiAzMDBweDtcclxuICBib3JkZXItcmlnaHQ6IDFweCBzb2xpZCAjZGRkO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmNGY0ZjQ7XHJcbiAgb3ZlcmZsb3cteTogYXV0bztcclxufVxyXG5cclxuLm1lc3NhZ2VzLXBhbmUge1xyXG4gIGZsZXg6IDE7XHJcbiAgcGFkZGluZzogMXJlbTtcclxuICBvdmVyZmxvdy15OiBhdXRvO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XHJcbn1cclxuPC9zdHlsZT5cclxuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9*/
