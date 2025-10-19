@@ -7,16 +7,6 @@
 
 > Plateforme web moderne permettant de connecter clients et freelances pour faciliter la publication et la gestion de missions professionnelles.
 
-## 📋 Table des matières
-
-- [À propos](#à-propos)
-- [Fonctionnalités](#fonctionnalités)
-- [Technologies utilisées](#technologies-utilisées)
-- [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Roadmap](#roadmap)
-- [Contribution](#contribution)
-- [Auteur](#auteur)
 
 ## 🎯 À propos
 FreelanceConnect est une plateforme web full-stack conçue pour simplifier la mise en relation entre clients et freelances. Le projet répond à un besoin réel de centralisation des opportunités de missions et permet une gestion complète du cycle de vie d'une mission, de la publication à l'attribution.
