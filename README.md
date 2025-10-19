@@ -14,7 +14,6 @@
 - [Technologies utilisées](#technologies-utilisées)
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-- [Captures d'écran](#captures-décran)
 - [Roadmap](#roadmap)
 - [Contribution](#contribution)
 - [Auteur](#auteur)
