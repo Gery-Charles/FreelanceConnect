@@ -3,7 +3,6 @@
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)]()
 [![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)]()
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
 > Plateforme web moderne permettant de connecter clients et freelances pour faciliter la publication et la gestion de missions professionnelles.
 
